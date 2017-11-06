@@ -268,12 +268,12 @@ o que pode configurar um acúmulo de dívida técnica que com o passar
 do tempo pode onerar os gastos (tempo, recursos humanos e recursos
 financeiros envolvidos no projeto de software) referentes a manutenção
 e evolução do software. Este trabalho tem como objetivo fazer uma
-análise da evolução do código registrado em um repositório de código
-- através de técnicas de mineração de dados de repositórios de código
+análise da evolução do código registrado em repositórios de software
+- através de técnicas de mineração de dados em repositórios de software
 - comparando com as regras arquiteturais originais, anomalias de código
 (bad smells), definir índices e indicadores para estimar a dívida
 técnica arquitetural e com isso mostrar para a equipe de desenvolvimento
-os locais ou áreas de degradação arquitetural de software. 
+os locais ou áreas de degradação arquitetural de software que mais impactam no pagamento desta dívida técnica.
 
 \emph{Palavras chaves:} Arquitetura de Software, Degradação Arquitetural
 de Software, Dívida Técnica, Mineração de Repositório de Código.
@@ -282,12 +282,7 @@ de Software, Dívida Técnica, Mineração de Repositório de Código.
 \index{Introdução}
 
 A aplicação do conceito de arquitetura de software vem crescendo dentro
-do contexto de engenharia de software desde dos anos 90. Visto que,
-o aumento da complexidade do software, a forma de direcionar sua complexidade
-como um ponto central em projetos de softwares de larga escala e sistemas
-de software de alta complexidade, pode trazer grandes benefícios para
-a equipe de desenvolvimento com relação a manutenção e evolução do
-software. \citeonline{series/utcs/OquendoLB16}
+do contexto de engenharia de software desde dos anos 90. Visto que, os sistemas atuais vem se tornando muito mais complexos e com isso, a arquitetura de software é considerada um ponto central em projetos complexos de sistemas de larga escala. A aplicação e o uso de um bom projeto arquitetural de software pode trazer grandes benefícios para a equipe de desenvolvimento. Principalmente no que se refere a manutenção e evolução do software tanto em correções e/ou debug de erros quanto na inserção de novas funcionalidades no sistema sem quebrar a estrutura do mesmo. \citeonline{series/utcs/OquendoLB16}
 
 Desde 2011 temos uma definição formal de arquitetura de software dada
 pela ISO/IEC Standard 42010 \textquotedblleft System and Software
@@ -296,10 +291,9 @@ propriedades fundamentais de um sistema concretizadas em seus elementos,
 relacionamentos, nos princípios de design e evolução\textquotedblright \citeonline{iso42010} 
 
 A degradação arquitetural acontece quando na medida que o sistema
-é implementado existe um desvio de implementação em relação as regras
-da arquitetura original. Quando isso acontece pode haver uma quebra
+é implementado existe um desvio de implementação em relação a arquitetura original. Quando isso acontece pode haver uma quebra
 na qualidade do sistema e com isso pode vir a dificultar a manutenção
-do mesmo, podendo surgir falhas ou inconsistências durante a evolução
+, podendo surgir falhas ou inconsistências durante a evolução
 do sistema. A degradação arquitetural pode ser classificada em duas
 perspectivas: (i) erosão arquitetural - relacionada a alterações da
 arquitetura descritiva que podem levar a violações de restrições de
@@ -310,10 +304,9 @@ exemplo: violações referentes a modularidade (acoplamento e coesão).
 Segundo Lehman (1996) \textquotedblleft Na medida que um programa
 é continuamente alterado, sua complexidade, reflete em uma deteriorização
 estrutural, incrementando trabalhos não realizados e aumentando a
-manutenção do mesmo.\textquotedblright{} Nesse caso, na medida que
-o tempo passa, a degradação arquitetural indica que o sistema está
+manutenção do mesmo.\textquotedblright{} Nesse caso, com o passar do tempo, a degradação arquitetural indica que o sistema está
 se degenerando. \citeonline{Lehman1996}Dentro desse contexto de degradação
-arquitetural podemos citar as Dívidas Técnicas de um projeto de software
+arquitetural podemos citar as Dívidas Técnicas [REFERÊNCIA] de um projeto de software
 que são atividades inerentes ao desenvolvimento mas não necessariamente
 ligadas as funcionalidades definidas no projeto. Na medida que um
 sistema é desenvolvido e este evolui existem atividades que beneficiam
@@ -446,7 +439,7 @@ em repositórios de código sob gerência de configuração, geração de
 índices e indicadores de qualidade de arquitetura de software e ferramentas
 de apoio nos referidos temas. Por fim, além de gerar um arcabouço
 de fundamentação teórica, direcionar e identificar as contribuições
-já realizadas, dificuldades encontradas no tema, lacunas existentestal
+já realizadas, dificuldades encontradas no tema, lacunas existentes, tal
 revisão poderá servir de base para guiar a presente pesquisa. 
 
 \emph{Arquitetura de Software }
@@ -477,7 +470,7 @@ como reparar as violações arquiteturais e até mesmo para introduzir
 novas violações ao reparar uma. Com isso, a referida tese propõe um
 sistema de recomendação de reparo arquitetural que fornece diretrizes
 de correção para desenvolvedores e mantenedores ao enfrentar a erosão
-arquitetural. O referido trabalhoformalizou um catálogo de recomendações
+arquitetural. O referido trabalho formalizou um catálogo de recomendações
 de reparação para reparar violações via verificação de conformidade
 arquitetural estática e também foi criada uma ferramenta ArchFix que
 avalia e faz recomendações de conformidade arquitetural.\citeonline{Terra2013USRPREAS}
@@ -490,7 +483,7 @@ de design importantes, desencadeando um processo de erosão no design
 do tratamento de exceção. A vericação de conformidade arquitetural
 fornece meios para controlar a erosão arquitetural, vericando periodicamente
 se a arquitetura real se mantem consistente com a arquitetura planejada.
-Em seu trabalho Menesespropõe a ferramenta ArCatch: uma solução de
+Em seu trabalho Meneses propõe a ferramenta ArCatch: uma solução de
 vericação de conformidade arquitetural para lidar com a erosão do
 design do tratamento de exceção. A ArCatch fornece: (i) uma linguagem
 específica de domínio declarativa para expressar restrições de design
@@ -773,7 +766,7 @@ em 6 fases:
 
 Fase Teórica - para estudo sobre Arquitetura de Software, Degração
 Arquitetural, Dívida Técnica, Mineração de Dados de Repositórios de
-Códigos, Métricas de Software e sobre as tecnologias serão utilizadas
+Códigos, Métricas de Software e sobre as tecnologias que serão utilizadas
 no desenvolvimento da solução. Bem como uma revisão sistemática sobre
 o tema para identificar o \textquotedblleft estado da arte\textquotedblright .
 O principal resultado dessa fase será um documento contendo um resumo
@@ -796,7 +789,7 @@ O resultado dessa etapa é um protótipo da será disponibilizado para
 uso e avaliação. 
 
 Fase de Experimentação - avaliar a solução proposta, via trabalho
-de campo, em um ambiente real e controladona indústria de software.
+de campo, em um ambiente real e controlado na indústria de software.
 Fazer observações e registros empíricos na indústria de software,
 bem como identificar e estudar softwares complexos notoriamente conhecidos
 e utilizados pela comunidade para posteriormente analisar os registros
